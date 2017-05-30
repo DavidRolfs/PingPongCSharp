@@ -46,25 +46,23 @@ namespace PingPong.Objects
       //Assert
       Assert.Equal(newList, output);
     }
-    // [Fact]
-    // public void GetOutput_GetAllListItems_ReturnOutput()
-    // {
-    //   //Arrange
-    //   string output1 = "1";
-    //   string output2 = "2";
-    //   string output3 = "Ping";
-    //
-    //   PingPongGenerator myPing1 = new PingPongGenerator(output1);
-    //   PingPongGenerator myPing2 = new PingPongGenerator(output2);
-    //
-    //   List<string> testList = PingPongGenerator.MakeList(3);
-    //
-    //   List<string> newList = new List<string> {output1, output2, output3};
-    //
-    //   //Act
-    //   List<string> result = testList.GetOutput();
-    //
-    //   //Assert
-    //   Assert.Equal(newList, result);
-    }
   }
+}
+//
+// [Fact]
+//
+// public void GetOutput_GetAllListItems_ReturnOutput()
+// {
+//   //Arrange
+//   PingPongGenerator ping1 = new PingPongGenerator(1);
+//
+//   ping1.MakeList();
+//
+//   List<string> newList = List<string>{ping1};
+//
+//
+//   //Act
+//
+//   //Assert
+//
+// }

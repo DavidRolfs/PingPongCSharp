@@ -1,8 +1,8 @@
 using Nancy;
 using System.Collections.Generic;
-using PingPong.Objects;
+using System.Diagnostics;
 
-namespace PingPong
+namespace PingPong.Objects
 {
   public class HomeModule : NancyModule
   {
@@ -10,6 +10,10 @@ namespace PingPong
     {
       Get["/"] = _ =>{
         return View["index.cshtml"];
+      };
+      Post["/result"] = _ =>{
+        PingPongGenerator newPingPong = new PingPongGenerator(Request.Form["new-number"]);
+        return View["result.cshtml", newPingPong];
       };
     }
   }
