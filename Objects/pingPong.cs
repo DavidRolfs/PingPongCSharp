@@ -1,9 +1,14 @@
 using System.Collections.Generic;
-namespace PingPong
+namespace PingPong.Objects
 {
   class PingPongGenerator
   {
+    private int _userNumber;
     private List<string> _output = new List<string> {};
+    public PingPongGenerator(int userNumber)
+    {
+      _userNumber = userNumber;
+    }
     public string IsPingPong(int number)
     {
       if(number % 15 == 0)
