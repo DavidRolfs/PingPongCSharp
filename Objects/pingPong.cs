@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 namespace PingPong
 {
   class PingPongGenerator
   {
+    private List<string> _output = new List<string> {};
     public string IsPingPong(int number)
     {
       if(number % 15 == 0)
@@ -16,8 +18,18 @@ namespace PingPong
       {
         return "Ping";
       }
-      else
+      else{
+
         return number.ToString();
       }
     }
+    public void MakeList(int userNum){
+       for(int i = 0; i <= userNum; i++){
+         _output.Add(IsPingPong(i));
+       }
+    }
+    public List<string> GetOutput(){
+      return _output;
+    }
   }
+}

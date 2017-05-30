@@ -1,4 +1,5 @@
 using Xunit;
+using System.Collections.Generic;
 
 namespace PingPong
 {
@@ -7,8 +8,12 @@ namespace PingPong
     [Fact]
     public void IsPingPong_ForNumbersNotModuleThreeAndFiveAndFifteen_Input()
     {
+      //Arrange
       PingPongGenerator testPingPong = new PingPongGenerator();
-      Assert.Equal("7", testPingPong.IsPingPong(7));
+      //Act
+      string expected = testPingPong.IsPingPong(7);
+      //Assert
+      Assert.Equal("7", expected);
     }
     [Fact]
     public void IsPingPong_ForNumbersDivisibleByFifteen_PingPong()
@@ -28,5 +33,21 @@ namespace PingPong
       PingPongGenerator testPingPong = new PingPongGenerator();
       Assert.Equal("Ping", testPingPong.IsPingPong(3));
     }
+    // [Fact]
+
+    // public void GetOutput_GetAllListItems_ReturnOutput()
+    // {
+    //   //Arrange
+    //   string output1 = "2";
+    //   string output2 = "Ping";
+    //
+    //   List<string> newList = new List<string> {output1, output2};
+    //
+    //   //Act
+    //   List<string> result = newList.GetOutput();
+    //
+    //   //Assert
+    //   Assert.Equal(newList, result);
+    // }
   }
 }
